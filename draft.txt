@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Download</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check if the user agent contains "iPhone" or "iPad" to identify iOS devices
+            if (/iPhone|iPod|iPad/.test(userAgent)) {
+                // Show content for iOS devices
+                document.getElementById('iosContent').style.display = 'block';
+            }
+            // Check if the user agent contains "Android" to identify Android devices
+            else if (/android/i.test(userAgent)) {
+                // Show content for Android devices
+                document.getElementById('androidContent').style.display = 'block';
+            }
+            // If the device is neither iOS nor Android, you can show a default content
+            else {
+                // Show default content
+                document.getElementById('defaultContent').style.display = 'block';
+            }
+        };
+    </script>
+    <style>
+        #resume {
+            width: 99%;
+            height: 97.2vh;
+        }
+
+        #link {
+            border: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <a id="link" href="Files/Anmol Madaan Resume.pdf">Dowload Resume</a> -->
+
+    <!-- Content for iOS devices -->
+    <div id="iosContent" style="display: none;">
+        <h1>iOS Content</h1>
+        <script>
+            window.onload = function() {
+                // Create a link element
+                var downloadLink = document.createElement('a');
+    
+                // Set the href attribute to the file you want to download
+                downloadLink.href = "Files/Anmol Madaan Resume.pdf";
+    
+                // Set the download attribute to specify the filename users will see
+                downloadLink.download = 'Anmol_Madaan_Resume.pdf';
+    
+                // Simulate a click to trigger the download
+                downloadLink.click();
+            };
+        </script>
+    </div>
+
+    <!-- Content for Android devices -->
+    <div id="androidContent" style="display: none;">
+        <h1>Android Content</h1>
+        <iframe
+        id="resume"
+        src="Files/Anmol Madaan Resume.pdf"
+        ></iframe>
+    </div>
+
+    <!-- Default content (for other devices) -->
+    <div id="defaultContent" style="display: none;">
+        <h1>Default Content</h1>
+        <script>
+            window.onload = function() {
+                // Create a link element
+                var downloadLink = document.createElement('a');
+    
+                // Set the href attribute to the file you want to download
+                downloadLink.href = "Files/Anmol Madaan Resume.pdf";
+    
+                // Set the download attribute to specify the filename users will see
+                downloadLink.download = 'Anmol_Madaan_Resume.pdf';
+    
+                // Simulate a click to trigger the download
+                downloadLink.click();
+            };
+        </script>
+    </div>
+    
+</body>
+</html>
