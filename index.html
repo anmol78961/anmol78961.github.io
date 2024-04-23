@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Download</title>
+    <style>
+        #resume {
+            width: 99%;
+            height: 97.2vh;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        window.onload = function() {
-            // Create a link element
-            var downloadLink = document.createElement('a');
-
-            // Set the href attribute to the file you want to download
-            downloadLink.href = "Files/Anmol Madaan Resume.pdf";
-
-            // Set the download attribute to specify the filename users will see
-            downloadLink.download = 'Anmol_Madaan_Resume.pdf';
-
-            // Simulate a click to trigger the download
-            downloadLink.click();
-        };
-    </script>
+    <iframe
+        id="resume"
+        src="Files/Anmol Madaan Resume.pdf"
+    ></iframe>
 </body>
 </html>
